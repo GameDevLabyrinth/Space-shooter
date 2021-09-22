@@ -5,6 +5,7 @@ namespace GameDevLabirinth
     public class LevelNameData
     {
         private const string Key = "SceneName";
+        private const string KeyLevelIndex = "LevelIndex";
 
         public void SetName(string name)
         {
@@ -20,6 +21,20 @@ namespace GameDevLabirinth
             }
 
             return null;
+        }
+
+        public void SetLevelIndex(int value)
+        {
+            PlayerPrefs.SetInt(KeyLevelIndex, value);
+            PlayerPrefs.Save();
+        }
+
+        public int GetLevelIndex()
+        {
+            if (PlayerPrefs.HasKey(KeyLevelIndex))
+                return PlayerPrefs.GetInt(KeyLevelIndex);
+
+            return 0;
         }
     }
 }
