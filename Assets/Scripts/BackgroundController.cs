@@ -13,7 +13,7 @@ namespace GameDevLabirinth
 
         private void Awake()
         {
-            _restartPosition = transform.position;
+            _restartPosition = transform.position = new Vector2(transform.position.x, new SafeAreaData().GetMin().y);
             _positionMinY = _sprite.bounds.size.y * 2 - _restartPosition.y; // две высоты спрайта - начальна€ позици€ по "”"
         }
 
