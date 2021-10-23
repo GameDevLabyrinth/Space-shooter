@@ -20,11 +20,15 @@ namespace GameDevLabirinth
 
         public void Generate()
         {
+            int offset = 2;
+            Vector2 startPosition = new Vector2(0, new SafeAreaData().GetMax().y + offset);
+
             foreach (var wave in _level.Waves)
             {
                 for (int i = 0; i < wave.CountInWave; i++)
                 {
                     var enemy = Instantiate(wave.EnemyPrefab, transform);
+                    enemy.transform.position = startPosition;
                     enemy.SetActive(false);
                     _enemies.Add(enemy);
                 }
