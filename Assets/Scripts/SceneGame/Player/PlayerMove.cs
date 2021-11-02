@@ -26,6 +26,8 @@ namespace GameDevLabirinth
 
                 _rigidbody2D.MovePosition(_rigidbody2D.position + _speed * Time.fixedDeltaTime * _direction);
             }
+            else
+                _rigidbody2D.velocity = Vector2.zero;
         }
     }
 }
