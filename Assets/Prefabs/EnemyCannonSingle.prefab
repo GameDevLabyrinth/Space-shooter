@@ -41,10 +41,8 @@ GameObject:
   - component: {fileID: 6092982349719640261}
   - component: {fileID: 6092982349719640266}
   - component: {fileID: 6092982349719640260}
-  - component: {fileID: 5927588271915858980}
-  - component: {fileID: 5147012827425085401}
   m_Layer: 0
-  m_Name: PlayerCannonSingle
+  m_Name: EnemyCannonSingle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,62 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709a0b834c67efb43ada133364929ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 2501790609775581122, guid: b6aebf748de805a4986364aa6e50eb22, type: 3}
-  _bulletsCount: 4
+  _bulletPrefab: {fileID: 2501790609775581122, guid: 357475a4ace78ba47b579fc489069f9d, type: 3}
+  _bulletsCount: 0
   _bulletStartPosition: {fileID: 6092982349263429585}
---- !u!114 &5927588271915858980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6092982349719640267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ed57e38afedcc4493e0fb0d68dfcd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: e05d414b472ba104eb1491d10d72a8b3, type: 2}
-  Action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5147012827425085401}
-        m_TargetAssemblyTypeName: GameDevLabirinth.ShotTimer, Assembly-CSharp
-        m_MethodName: StartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5147012827425085401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6092982349719640267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7e73bd241f840438a056b374a155e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shothInterval: 0.5
-  OnShot:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6092982349719640260}
-        m_TargetAssemblyTypeName: GameDevLabirinth.CannonSingle, Assembly-CSharp
-        m_MethodName: Shot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GameDevLabirinth
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class EnemyMove : MonoBehaviour
     {
+        [SerializeField]
+        private UnityEvent OnCheckPoint;
+
         private const float Speed = 5f;
 
         [SerializeField]
@@ -26,6 +30,7 @@ namespace GameDevLabirinth
                 if (_index < _path.Points.Count - 1)
                 {
                     _index++;
+                    OnCheckPoint.Invoke();
                 }
                 else
                     Destroy(gameObject);

@@ -13,9 +13,9 @@ TagManager:
   - UI
   - PlayZoneBorder
   - Enemy
-  - Bullet
-  - 
-  - 
+  - EnemyBullet
+  - PlayerBullet
+  - Player
   - 
   - 
   - 
