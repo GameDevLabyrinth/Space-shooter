@@ -6,7 +6,7 @@ namespace GameDevLabirinth
     {
         public void Activate()
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 0.2f);
             //TODO: add effects, score ....
         }
     }
