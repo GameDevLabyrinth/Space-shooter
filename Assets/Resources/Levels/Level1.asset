@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waves:
   - EnemyPrefab: {fileID: 7802198382455101584, guid: ff1e4b5dcba094843880f6b46c6560be, type: 3}
-    CountInWave: 5
+    CountInWave: 15
     WaitAfterWave: 3
   - EnemyPrefab: {fileID: 7802198382455101584, guid: ff1e4b5dcba094843880f6b46c6560be, type: 3}
     CountInWave: 10

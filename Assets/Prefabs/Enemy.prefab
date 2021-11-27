@@ -194,7 +194,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: -7868026278343393272}
         m_TargetAssemblyTypeName: GameDevLabirinth.DeadEffect, Assembly-CSharp
-        m_MethodName: Destroy
+        m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

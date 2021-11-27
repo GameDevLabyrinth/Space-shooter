@@ -7,7 +7,7 @@ namespace GameDevLabirinth
     {
         public static event Action<Transform> OnObjectDestroyed;
 
-        public void Destroy()
+        public void Activate()
         {
             OnObjectDestroyed?.Invoke(transform);
         }

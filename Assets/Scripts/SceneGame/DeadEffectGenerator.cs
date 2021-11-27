@@ -5,6 +5,8 @@ namespace GameDevLabirinth
 {
     public class DeadEffectGenerator : MonoBehaviour
     {
+        private const int EffectCount = 1;
+
         [SerializeField]
         private ParticleSystem _prefab;
 
@@ -12,9 +14,9 @@ namespace GameDevLabirinth
 
         private void Awake()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < EffectCount; i++)
             {
-                _effects.Add(Create(_prefab));
+                Create(_prefab);
             }
         }
 
@@ -47,7 +49,9 @@ namespace GameDevLabirinth
 
         private GameObject Create(ParticleSystem prefab)
         {
-            return Instantiate(prefab.gameObject, transform);
+            GameObject effect = Instantiate(prefab.gameObject, transform);
+            _effects.Add(effect);
+            return effect;
         }
     }
 }
