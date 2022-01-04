@@ -31,5 +31,14 @@ namespace GameDevLabirinth
                 //Destroy(gameObject); 
                 OnEndedHelth.Invoke();
         }
+
+        public void AddHealth(int value)
+        {
+            if (value > 0)
+                _currentHealth += value;
+            if (_currentHealth > _maxHealth)
+                _currentHealth = _maxHealth;
+            Debug.Log(_currentHealth);
+        }
     }
 }
