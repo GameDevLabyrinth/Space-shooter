@@ -115,5 +115,6 @@ MonoBehaviour:
   Activated:
     m_PersistentCalls:
       m_Calls: []
+  _weight: 10
   _shieldPrefab: {fileID: 3616277064614723731, guid: 927de0ba5da294a4f8e29e31fa922660, type: 3}
   _liveTime: 10

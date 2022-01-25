@@ -402,6 +402,8 @@ GameObject:
   - component: {fileID: 182544154}
   - component: {fileID: 182544153}
   - component: {fileID: 182544156}
+  - component: {fileID: 182544157}
+  - component: {fileID: 182544158}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -505,6 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee353dd433f7e4eb2e21c8b2e48898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bonusGenerator: {fileID: 182544158}
+  _bonusQueue: {fileID: 182544157}
 --- !u!114 &182544156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +536,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &182544157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182544150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9444d0817da45184a9f0e43abc640ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &182544158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182544150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cbfee9621a724479698b527d0e5a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bonusQueue: {fileID: 182544157}
+  _gameBonuseData: {fileID: 11400000, guid: ec64e8feac024e847a591773a639da23, type: 2}
 --- !u!1 &208815636
 GameObject:
   m_ObjectHideFlags: 0

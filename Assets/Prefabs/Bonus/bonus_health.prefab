@@ -112,6 +112,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _weight: 10
   _health: 200
 --- !u!114 &8337728840926426895
 MonoBehaviour:

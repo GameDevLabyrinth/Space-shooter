@@ -11,6 +11,9 @@ namespace GameDevLabirinth
         [SerializeField]
         private UnityEvent Activated;
 
+        [SerializeField, Range(10, 100)] private int _weight = 10;
+        public int Weight => _weight;
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.TryGetComponent(out PlayerMove playerMove))

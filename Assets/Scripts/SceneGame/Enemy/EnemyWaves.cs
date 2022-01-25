@@ -6,6 +6,9 @@ namespace GameDevLabirinth
 {
     public class EnemyWaves : MonoBehaviour
     {
+        [SerializeField] private BonusGenerator _bonusGenerator;
+        [SerializeField] private BonusQueue _bonusQueue;
+
         private LevelData _level;
         private int _indexWave;
         private int _indexEnemy;
@@ -28,6 +31,13 @@ namespace GameDevLabirinth
                 for (int i = 0; i < wave.CountInWave; i++)
                 {
                     var enemy = Instantiate(wave.EnemyPrefab, transform);
+
+                    if(enemy.TryGetComponent(out EnemyBonusDrop enemyBonusDrop))
+                    {
+                        enemyBonusDrop.SetBonusQueue(_bonusQueue);
+                        enemyBonusDrop.SetHaveBonus(_bonusGenerator.TryGetBonus());
+                    }
+                    
                     enemy.transform.position = startPosition;
                     enemy.SetActive(false);
                     _enemies.Add(enemy);
